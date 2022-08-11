@@ -112,7 +112,11 @@ public class UserActionsRegistrar
     registrator.registerUserAction(mendixsso.actions.LogOutUser.class);
     registrator.registerUserAction(mendixsso.actions.StartSignOnServlet.class);
     registrator.registerUserAction(myfirstmodule.actions.AppendStringToDocument.class);
+    registrator.registerUserAction(myfirstmodule.actions.AppendStringToFileBuffer.class);
+    registrator.registerUserAction(myfirstmodule.actions.AppendStringToMemoryBuffer.class);
+    registrator.registerUserAction(myfirstmodule.actions.BuildStringDocumentInFileBuffer.class);
     registrator.registerUserAction(myfirstmodule.actions.ListToString.class);
+    registrator.registerUserAction(myfirstmodule.actions.MoveMemoryBufferToDocument.class);
     registrator.registerUserAction(system.actions.VerifyPassword.class);
   }
 }

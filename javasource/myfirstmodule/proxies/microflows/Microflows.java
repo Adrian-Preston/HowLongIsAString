@@ -25,7 +25,12 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("MyFirstModule.AppendAtTheEndBuildString").withParams(params).execute(context);
 	}
-	public static java.lang.String getEntityToString(IContext context, myfirstmodule.proxies.Entity _entity)
+	public static void fileBufferBuildString(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("MyFirstModule.FileBufferBuildString").withParams(params).execute(context);
+	}
+	public static java.lang.String getEntityToString(IContext context, myfirstmodule.proxies.BusinessEntity _entity)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Entity", _entity == null ? null : _entity.getMendixObject());
@@ -36,11 +41,21 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("MyFirstModule.JustRead").withParams(params).execute(context);
 	}
+	public static void memoryBufferBuildString(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("MyFirstModule.MemoryBufferBuildString").withParams(params).execute(context);
+	}
 	public static void sUB_CreateData(IContext context, myfirstmodule.proxies.NumberOfRecords _numberOfRecords)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("NumberOfRecords", _numberOfRecords == null ? null : _numberOfRecords.getMendixObject());
 		Core.microflowCall("MyFirstModule.SUB_CreateData").withParams(params).execute(context);
+	}
+	public static java.lang.Long sUB_FileBufferBuildString(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Long) Core.microflowCall("MyFirstModule.SUB_FileBufferBuildString").withParams(params).execute(context);
 	}
 	public static java.lang.Long sUB_TempStorageBuildString(IContext context, myfirstmodule.proxies.OutputDocument _outputDocument)
 	{
