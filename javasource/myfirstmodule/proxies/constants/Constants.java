@@ -23,6 +23,11 @@ public class Constants
 		return (java.lang.Long)Core.getConfiguration().getConstantValue("MyFirstModule.BatchSize");
 	}
 
+	public static boolean getDisableFileBufferHashGeneration()
+	{
+		return (java.lang.Boolean)Core.getConfiguration().getConstantValue("MyFirstModule.DisableFileBufferHashGeneration");
+	}
+
 	public static boolean getDisableTempStorageHashGeneration()
 	{
 		return (java.lang.Boolean)Core.getConfiguration().getConstantValue("MyFirstModule.DisableTempStorageHashGeneration");
